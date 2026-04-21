@@ -258,8 +258,7 @@ function mkBadge(a, b, goodUp = true) {
   if (!b) return '<span class="badge badge-na">—</span>';
   const p = (a - b) / Math.abs(b) * 100;
   const isUp = p >= 0;
-  const isGood = goodUp ? isUp : !isUp;
-  const cls = isGood ? 'badge-up' : 'badge-dn';
+  const cls = isUp ? 'badge-up' : 'badge-dn';
   const arrow = isUp ? '↑' : '↓';
   const word = isUp ? 'เพิ่มขึ้น' : 'ลดลง';
   return `<span class="badge ${cls}">${arrow} ${Math.abs(p).toFixed(1)}% ${word}</span>`;
